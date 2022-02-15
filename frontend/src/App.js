@@ -6,8 +6,8 @@ import Header from './components/Header';
 const App = () => {
   return (
     <div>
-      <Header title="Images Gallery"/>
-      
+      <Header title="Images Gallery | About Us"/>
+     
     </div>
   );
 }
