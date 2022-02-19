@@ -19,7 +19,8 @@ const App = () => {
 
   return (
     <div>
-      <Header title="Images Gallery"/>
+      <Header title="Test"/> 
+     
      <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit}/>
     </div>
 
