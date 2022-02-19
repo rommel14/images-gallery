@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
-const Search = ({ handleSubmit }) => {
+const Search = ({word, setWord, handleSubmit }) => {
     return (
         //for padding yung mt-4; Col xs={9}-this occupies 9 of 12 of the parent width or column
         <Container className="mt-4">
@@ -12,7 +12,11 @@ const Search = ({ handleSubmit }) => {
                         <Form.Row>
                             
                             <Col xs={9}>
-                                <Form.Control placeholder="Search for Image" />
+                                <Form.Control 
+                                type="text"
+                                value={word}
+                                onChange={(e) => setWord(e.target.value)}
+                                placeholder="Search for Image" />
 
                             </Col>
 
