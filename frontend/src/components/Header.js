@@ -4,8 +4,8 @@ import { Navbar, Container } from 'react-bootstrap'
 
 //pang header
 const navbarStyle = {
-    backgroundColor: 'lightblue',
-    fontSize:'2px'
+    backgroundColor: 'maroon',
+    textColor:'white'
 };
 
 const Header = ({title}) => {
