@@ -1,21 +1,15 @@
 [
     {
-
-        "School":"Bulacan State University-Bustos Campus",
+        "School": "BSU-Bustos",
         "Course": "BSIT",
-        "Track" : "Web and Mobile",
-        "Year Level": 3
-
+        "Year Level": 3,
+        "Track": "Web and Mobile"
     },
 
     {
-        "School":"Bulacan State University-Bustos Campus",
-        "Course": "BSIT",
-        "Track" : "Business Analytics",
-        "Year Level": 3
+        "School": "BSU-Bustos",
+        "Course":"BSIT",
+        "Year Level":3,
+        "Track":"Business Analytics"
     }
-
-    
-
-
 ]
