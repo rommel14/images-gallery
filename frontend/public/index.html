@@ -30,25 +30,33 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     
+
+    <h>Where is the ISS</h>
+
+    <p>
+      latitude: <span id="lat"></span><br/>
+      longtitude: <span id="long"></span>
+
+
+    </p>
+
+
     <script type="text/javaScript">
-       let school  = 
-    [
-    {
-        "School": "BSU-Bustos",
-        "Course": "BSIT",
-        "Year Level": 3,
-        "Track": "Web and Mobile"
-    },
+      const api_url = 'https://api.wheretheiss.at/v1/satellites/'
 
-    {
-        "School": "BSU-Bustos",
-        "Course":"BSIT",
-        "Year Level":3,
-        "Track":"Business Analytics"
-    }
-] 
+      async function getISS(){
+        const response = await fetch(api_url);
+        const data = await response.json();
+        
+        const { latitude, longtitude } = data;
 
-console.log(school)
+      document.getElementById('lat').textContent = latitude;
+      document.getElementById('long').textContent = longtitude;
+      //console.log(data);
+        
+      }
+     
+     getISS();
 </script>
   
 
