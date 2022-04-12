@@ -27,36 +27,36 @@
     <title>Images Gallery</title>
   </head>
   <body>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     
+    <h1>Atmosphere</h1>
+<p>
 
-    <h>Where is the ISS</h>
+  latitude: <span id="lat"></span><br/>
+  longitude: <span id="lon"></span><br/>
+  altitude: <span id="alt"></span><br/>
 
-    <p>
-      latitude: <span id="lat"></span><br/>
-      longtitude: <span id="long"></span>
+</p>
+    
+<script type="text/javaScript">
+  const api = 'https://api.wheretheiss.at/v1/satellites/25544'
 
+  async function get_mydata(){
+    const res = await fetch(api);
+    const data = await res.json();
+    const { latitude, longitude, altitude } = data;
 
-    </p>
+    //output stream
+    document.getElementById('lat').textContent = latitude;
+    document.getElementById('lon').textContent = longitude;
+    document.getElementById('alt').textContent = altitude;
+   
 
-
-    <script type="text/javaScript">
-      const api_url = 'https://api.wheretheiss.at/v1/satellites/'
-
-      async function getISS(){
-        const response = await fetch(api_url);
-        const data = await response.json();
-        
-        const { latitude, longtitude } = data;
-
-      document.getElementById('lat').textContent = latitude;
-      document.getElementById('long').textContent = longtitude;
-      //console.log(data);
-        
-      }
-     
-     getISS();
+  }
+  //function call
+  get_mydata();
 </script>
   
 
