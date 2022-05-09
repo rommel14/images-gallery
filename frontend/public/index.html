@@ -31,34 +31,7 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     
-    <h1>Atmosphere</h1>
-<p>
-
-  latitude: <span id="lat"></span><br/>
-  longitude: <span id="lon"></span><br/>
-  altitude: <span id="alt"></span><br/>
-
-</p>
     
-<script type="text/javaScript">
-  const api = 'https://api.wheretheiss.at/v1/satellites/25544'
-
-  async function get_mydata(){
-    const res = await fetch(api);
-    const data = await res.json();
-    const { latitude, longitude, altitude } = data;
-
-    //output stream
-    document.getElementById('lat').textContent = latitude;
-    document.getElementById('lon').textContent = longitude;
-    document.getElementById('alt').textContent = altitude;
-   
-
-  }
-  //function call
-  get_mydata();
-</script>
-  
 
      
     <!--
