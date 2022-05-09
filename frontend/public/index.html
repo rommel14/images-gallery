@@ -33,6 +33,28 @@
     
     
 
+</p>
+    
+<script type="text/javaScript">
+  const api = 'https://api.wheretheiss.at/v1/satellites/25544'
+
+  async function get_mydata(){
+    const res = await fetch(api);
+    const data = await res.json();
+    const { latitude, longitude, altitude } = data;
+
+    //output stream
+    document.getElementById('lat').textContent = latitude;
+    document.getElementById('lon').textContent = longitude;
+    document.getElementById('alt').textContent = altitude;
+   
+
+  }
+  //function call
+  get_mydata();
+</script>
+  
+
      
     <!--
       This HTML file is a template.
